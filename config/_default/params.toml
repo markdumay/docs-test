@@ -25,7 +25,7 @@
     checkVersion = false
 
 [home]
-    # sections = ["posts"]
+    sections = ["blog", "projects"]
     fullCover = false
     centerHeadline = false
     style = ""
@@ -83,28 +83,42 @@
     weight = 50
     clipboard = true
 
-# toml-docs-start sections
-# [sections]
-#     [sections.posts]
-#         title = "Posts"
-#         sort = "date"
-#         reverse = true
-#         nested = true
-#         cols = 3
-#         color = ""
-#         padding = "0"
-#         header = "full"
-#         footer = "none"
-#         orientation = "stacked"
-#         style = "border-0 card-zoom"
-#         homepage = 3
-#         separator = true
-# toml-docs-end sections
+[sections]
+    [sections.blog]
+        title = "Blog"
+        sort = "date"
+        reverse = true
+        cols = 3
+        color = ""
+        padding = "0"
+        header = "full"
+        footer = "none"
+        orientation = "stacked"
+        style = "border-0 card-zoom card-body-margin"
+        homepage = 3
+        separator = true
+    [sections.projects]
+        title = "Projects"
+        layout = "card"
+        sort = "title"
+        reverse = false
+        nested = true
+        cols = 1
+        background = "body-tertiary"
+        color = "body"
+        padding = "3"
+        header = "none"
+        footer = "tags"
+        orientation = "horizontal"
+        style = "border-1 card-emphasize"
+        homepage = 3
+        separator = false
 
 [favicon]
     logo = "img/favicon.png"
     sizes = [16, 32, 48]
 
+# toml-docs-start theme-colors
 [style]
     primary = "#d43900"
     secondary = "#6c757d"
@@ -122,6 +136,7 @@
     themeFontPath = "/fonts" # local path
     fontSizeBase = "1rem"
     purge = false
+# toml-docs-end theme-colors
 
 [schema]
     type = "Organization"
@@ -150,4 +165,10 @@
     locale = "en_US"
 
 [links]
+    bs_badge_heading = "https://getbootstrap.com/docs/5.3/components/badge/#headings"
+    hinode_docs = "https://gethinode.com"
+    hugo_imaging = "https://gohugo.io/content-management/image-processing/#imaging-configuration"
+    mozilla_image = "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+    observatory = "https://observatory.mozilla.org/analyze/demo.gethinode.com"
+    pagespeed = "https://pagespeed.web.dev/report?url=https%3A%2F%2Fdemo.gethinode.com%2F"
     hinode = "https://gethinode.com"
