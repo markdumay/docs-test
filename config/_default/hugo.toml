@@ -1,15 +1,15 @@
+# resourcedir = '../resources/'
 title = "Hinode"
 copyright = "Copyright © 2024 Mark Dumay."
 paginate = 9
 enableGitInfo = true
 
 # additional settings
-baseURL = "https://example.com/"
+baseURL = "https://demo.gethinode.com/"
 canonifyURLs = false
 enableEmoji = true
 enableRobotsTXT = true
 enableInlineShortcodes = true
-summaryLength = 20
 
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
@@ -19,7 +19,7 @@ timeout = "180s"
 
 languageCode = "en-us"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 
 [outputFormats.REDIR]
 mediaType = "text/netlify"
@@ -63,7 +63,7 @@ home = ["HTML", "RSS", "REDIR"]
   [services.twitter]
     disableInlineCSS = true
   [services.googleAnalytics]
-    # ID = "G-xxxxxxxxxx"
+    ID = "G-T85PPZ36GN"
 
 [outputFormats]
   [outputFormats.XML]
@@ -93,9 +93,9 @@ home = ["HTML", "RSS", "REDIR"]
   [[module.mounts]]
     source = "assets"
     target = "assets"
-  [[module.mounts]]
-    source = "content"
-    target = "content"
+  # [[module.mounts]]
+  #   source = "content"
+  #   target = "content"
   [[module.mounts]]
     source = "i18n"
     target = "i18n"
